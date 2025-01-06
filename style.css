@@ -31,7 +31,7 @@ header h1 {
 
 /* Balance Section */
 .balance-section {
-  background: #28a745; /* Green background */
+  background: #28a745; /* Green background for the balance section */
   color: white;
   padding: 20px;
   border-radius: 8px;
@@ -48,7 +48,7 @@ header h1 {
 
 .summary-item {
   flex: 1 1 calc(20% - 20px);
-  background: #f4f1e1; /* Light beige color for the items (warm and soft) */
+  background: #f4f1e1; /* Light beige background for the items */
   text-align: center;
   padding: 15px;
   border-radius: 5px;
@@ -60,9 +60,13 @@ header h1 {
   margin-bottom: 10px;
 }
 
+.summary-item p {
+  color: black; /* Make sure the text color is black */
+}
+
 /* Form Section */
 .form-section {
-  background: #28a745; /* Green background */
+  background: #28a745; /* Green background for form section */
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 20px;
@@ -114,6 +118,11 @@ button {
   background-color: #5a6268;
 }
 
+/* Center Text Utility */
+.center-text {
+  text-align: center;
+}
+
 /* Chart Section */
 .chart-container {
   text-align: center;
@@ -129,6 +138,19 @@ canvas {
 .transaction-history-container {
   margin-top: 20px;
   text-align: center;
+}
+
+#show-transactions {
+  margin-top: 20px; /* Add space above the button */
+}
+
+/* Optional: Add a divider line */
+.transaction-history-container::before {
+  content: "";
+  display: block;
+  margin: 20px 0;
+  height: 1px;
+  background-color: #ccc; /* Light grey line */
 }
 
 #transaction-section {
