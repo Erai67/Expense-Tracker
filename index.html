@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Expense Tracker</h1>
+  </header>
+
+  <div class="container">
+    <!-- Balance Section -->
+    <div class="balance-section">
+      <h2>Balance Overview</h2>
+      <div class="summary-grid">
+        <div class="summary-item">
+          <h3>Balance</h3>
+          <p id="balance">INR 0.00</p>
+        </div>
+        <div class="summary-item">
+          <h3>Income</h3>
+          <p id="income">Income: INR 0.00</p>
+        </div>
+        <div class="summary-item">
+          <h3>Shopping</h3>
+          <p id="shopping">Shopping: INR 0.00</p>
+        </div>
+        <div class="summary-item">
+          <h3>Food</h3>
+          <p id="food">Food: INR 0.00</p>
+        </div>
+        <div class="summary-item">
+          <h3>Bills & Utilities</h3>
+          <p id="bills">Bills & Utilities: INR 0.00</p>
+        </div>
+        <div class="summary-item">
+          <h3>Others</h3>
+          <p id="others">Others: INR 0.00</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Transaction Form -->
+    <div class="form-section">
+      <h2>Add Transaction</h2>
+      <form id="expense-form" class="form-grid">
+        <div>
+          <label for="purpose">Purpose</label>
+          <input type="text" id="purpose" required />
+        </div>
+        <div>
+          <label for="amount">Amount</label>
+          <input type="number" id="amount" required />
+        </div>
+        <div>
+          <label for="category">Category</label>
+          <select id="category" required>
+            <option value="Income">Income</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Food">Food</option>
+            <option value="Bills">Bills</option>
+            <option value="Others">Others</option>
+          </select>
+        </div>
+        <div>
+          <button type="submit" class="btn-primary">Add Transaction</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Transaction History Section -->
+    <div class="transaction-history-container">
+      <button id="show-transactions" class="btn-secondary">Show Transaction History</button>
+      <div id="transaction-section" style="display:none;">
+        <h3>Transaction History</h3>
+        <table id="transaction-list">
+          <thead>
+            <tr>
+              <th>Purpose</th>
+              <th>Category</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Chart Section -->
+    <div class="chart-container">
+      <button id="toggle-chart" class="btn-secondary">Toggle Chart Type</button>
+      <canvas id="expense-chart"></canvas>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
